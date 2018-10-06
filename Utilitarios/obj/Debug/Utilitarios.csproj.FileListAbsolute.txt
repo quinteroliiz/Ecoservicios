@@ -2,3 +2,8 @@ C:\Users\anali\Desktop\Ecoservicios\Utilitarios\bin\Debug\Utilitarios.dll
 C:\Users\anali\Desktop\Ecoservicios\Utilitarios\bin\Debug\Utilitarios.pdb
 C:\Users\anali\Desktop\Ecoservicios\Utilitarios\obj\Debug\Utilitarios.dll
 C:\Users\anali\Desktop\Ecoservicios\Utilitarios\obj\Debug\Utilitarios.pdb
+A:\Proyecto\Ecoservicios\Utilitarios\bin\Debug\Utilitarios.dll
+A:\Proyecto\Ecoservicios\Utilitarios\bin\Debug\Utilitarios.pdb
+A:\Proyecto\Ecoservicios\Utilitarios\obj\Debug\Utilitarios.csprojResolveAssemblyReference.cache
+A:\Proyecto\Ecoservicios\Utilitarios\obj\Debug\Utilitarios.dll
+A:\Proyecto\Ecoservicios\Utilitarios\obj\Debug\Utilitarios.pdb

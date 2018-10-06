@@ -7,3 +7,12 @@ C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Utilitarios.dll
 C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Encapsular.pdb
 C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Utilitarios.pdb
 C:\Users\anali\Desktop\Ecoservicios\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+A:\Proyecto\Ecoservicios\Data\bin\Debug\Data.dll
+A:\Proyecto\Ecoservicios\Data\bin\Debug\Data.pdb
+A:\Proyecto\Ecoservicios\Data\bin\Debug\Encapsular.dll
+A:\Proyecto\Ecoservicios\Data\bin\Debug\Utilitarios.dll
+A:\Proyecto\Ecoservicios\Data\bin\Debug\Encapsular.pdb
+A:\Proyecto\Ecoservicios\Data\bin\Debug\Utilitarios.pdb
+A:\Proyecto\Ecoservicios\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+A:\Proyecto\Ecoservicios\Data\obj\Debug\Data.dll
+A:\Proyecto\Ecoservicios\Data\obj\Debug\Data.pdb

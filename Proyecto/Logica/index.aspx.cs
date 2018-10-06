@@ -15,6 +15,11 @@ public partial class Presentacion_index : System.Web.UI.Page
         EUsuario eusuario = new EUsuario();
         eusuario.Email = "Hola";
         eusuario.Password = "Contraseña";
-        LB_mensaje.Text = eusuario.Email + " " + eusuario.Password;
+  
+    }
+
+    protected void B_ingresar_Click(object sender, EventArgs e)
+    {
+
     }
 }
