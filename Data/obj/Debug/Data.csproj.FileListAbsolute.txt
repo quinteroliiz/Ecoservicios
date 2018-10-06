@@ -1,9 +1,0 @@
-C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Data.dll
-C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Data.pdb
-C:\Users\anali\Desktop\Ecoservicios\Data\obj\Debug\Data.dll
-C:\Users\anali\Desktop\Ecoservicios\Data\obj\Debug\Data.pdb
-C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Encapsular.dll
-C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Utilitarios.dll
-C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Encapsular.pdb
-C:\Users\anali\Desktop\Ecoservicios\Data\bin\Debug\Utilitarios.pdb
-C:\Users\anali\Desktop\Ecoservicios\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
