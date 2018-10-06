@@ -1,0 +1,11 @@
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Logica.dll
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Logica.pdb
+C:\Users\anali\Desktop\Ecoservicios\Logica\obj\Debug\Logica.dll
+C:\Users\anali\Desktop\Ecoservicios\Logica\obj\Debug\Logica.pdb
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Data.dll
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Encapsular.dll
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Utilitarios.dll
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Data.pdb
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Encapsular.pdb
+C:\Users\anali\Desktop\Ecoservicios\Logica\bin\Debug\Utilitarios.pdb
+C:\Users\anali\Desktop\Ecoservicios\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache

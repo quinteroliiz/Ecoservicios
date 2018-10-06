@@ -1,0 +1,4 @@
+C:\Users\anali\Desktop\Ecoservicios\Encapsular\bin\Debug\Encapsular.dll
+C:\Users\anali\Desktop\Ecoservicios\Encapsular\bin\Debug\Encapsular.pdb
+C:\Users\anali\Desktop\Ecoservicios\Encapsular\obj\Debug\Encapsular.dll
+C:\Users\anali\Desktop\Ecoservicios\Encapsular\obj\Debug\Encapsular.pdb
