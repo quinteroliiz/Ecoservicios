@@ -26,7 +26,7 @@ public partial class Presentacion_index : System.Web.UI.Page
         }
         else
         {
-            
+            Response.Redirect("home.aspx");
         }
     }
 }
