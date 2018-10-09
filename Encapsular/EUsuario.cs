@@ -8,34 +8,33 @@ namespace Encapsular
 {
     public class EUsuario
     {
-        private string email;
+        private String userName;
+        private String clave;
 
-        public string Email
+        public string UserName
         {
             get
             {
-                return email;
+                return userName;
             }
 
             set
             {
-                email = value;
+                userName = value;
             }
         }
 
-        public string Password
+        public string Clave
         {
             get
             {
-                return password;
+                return clave;
             }
 
             set
             {
-                password = value;
+                clave = value;
             }
         }
-
-        private string password;
     }
 }

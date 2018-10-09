@@ -16,3 +16,6 @@ A:\Proyecto\Ecoservicios\Data\bin\Debug\Utilitarios.pdb
 A:\Proyecto\Ecoservicios\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 A:\Proyecto\Ecoservicios\Data\obj\Debug\Data.dll
 A:\Proyecto\Ecoservicios\Data\obj\Debug\Data.pdb
+A:\Proyecto\Ecoservicios\Data\bin\Debug\MySql.Data.dll
+A:\Proyecto\Ecoservicios\Data\bin\Debug\Google.Protobuf.dll
+A:\Proyecto\Ecoservicios\Data\bin\Debug\MySql.Data.xml
