@@ -8,8 +8,8 @@
         <br />
         <br />
         <br />
-        
-    <asp:GridView ID="GV_empleado" runat="server" AutoGenerateColumns="False" DataSourceID="ODS_Empleado" CssClass="table" AllowPaging="True">
+    <asp:Panel
+    ID="panel_grilla" ScrollBars="Horizontal" runat="server"><asp:GridView ID="GV_empleado" runat="server" AutoGenerateColumns="False" DataSourceID="ODS_Empleado" CssClass="table" AllowPaging="True" DataKeyNames="id_empleado" OnRowCommand="GV_empleado_RowCommand">
         <Columns>
             <asp:BoundField DataField="id_empleado" HeaderText="Id" />
             <asp:BoundField DataField="nombre_empleado" HeaderText="Nombre" />
@@ -19,9 +19,17 @@
             <asp:BoundField DataField="talla_botas" HeaderText="Botas" />
             <asp:BoundField DataField="talla_overol" HeaderText="Overol" />
             <asp:BoundField HeaderText="Impermeable" DataField="talla_impermeable" />
+            <asp:TemplateField HeaderText="Acciones">
+                <ItemTemplate>
+                    <asp:Button ID="B_consultar" runat="server" CssClass="btn btn-info"  />
+                    <asp:Button ID="B_modificar" runat="server" CssClass="btn btn-warning" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>' CommandName='<%# "Modificar" %>' />
+                    <asp:Button ID="B_eliminar" runat="server" CssClass="btn btn-danger" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>' CommandName='<%# "Eliminar" %>'  />
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
     </asp:GridView>
         <asp:ObjectDataSource ID="ODS_Empleado" runat="server" SelectMethod="mostrarEmpleado" TypeName="Data.DAO_Empleado"></asp:ObjectDataSource>
-        </form>
+       </asp:Panel> 
+         </form>
 </asp:Content>
 

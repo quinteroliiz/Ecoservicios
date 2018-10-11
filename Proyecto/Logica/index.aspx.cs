@@ -17,13 +17,6 @@ public partial class Presentacion_index : System.Web.UI.Page
 
     protected void B_ingresar_Click(object sender, EventArgs e)
     {
-        if (TB_email.Text == "" || TB_pass.Text == "")
-        {
-            Response.Write("<script>window.alert('Campos Vacios');</script>");
-        }
-        else
-        {
-            Response.Redirect("home.aspx");
-        }
+
     }
 }

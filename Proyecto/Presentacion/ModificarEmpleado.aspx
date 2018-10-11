@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/MasterPage.master" AutoEventWireup="true" CodeFile="~/Logica/CrearEmpleado.aspx.cs" Inherits="Presentacion_CrearEmpleado" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Presentacion/MasterPage.master" AutoEventWireup="true" CodeFile="~/Logica/ModificarEmpleado.aspx.cs" Inherits="Presentacion_ModificarEmpleado" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="titulopanel" Runat="Server">
-    <h4 class="panel-title">Nuevo Empleado</h4>
+    <h4 class="panel-title">Modificar Empleado</h4>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenidopanel" Runat="Server">
-    <form runat="server" class="form-horizontal" style="text-align: center">
+    <form runat="server" class="form-horizontal">
         <div class="form-group">
               <label class="col-md-3 control-label">Identificacion</label>
               <div class="col-md-9">
                   <asp:textbox id="id_empleado" runat="server" tooltip="Identificacion" cssclass="form-control" placeholder="Identificacion" maxlength="10" width="300 px"></asp:textbox>
-                  <asp:requiredfieldvalidator id="RFV_id" runat="server" errormessage="*" controltovalidate="id_empleado" cssclass="alert-danger"></asp:requiredfieldvalidator>
+ 
               </div>
         </div>
         <div class="form-group">
@@ -40,7 +40,7 @@
         <div class="form-group">
               <label class="col-md-3 control-label">Fecha de Nacimiento</label>
               <div class="col-md-9">
-                   <asp:TextBox ID="fecha_nacimiento" runat="server" ToolTip="Fecha de nacimiento del empleado" CssClass="form-control" placeholder="aaaa-mm-dd" MaxLength="10" Width="300 px" TextMode="Date"></asp:TextBox>
+                   <asp:TextBox ID="fecha_nacimiento" runat="server" ToolTip="Fecha de nacimiento del empleado" CssClass="form-control" placeholder="aaaa-mm-dd" MaxLength="10" Width="300 px"></asp:TextBox>
               </div>
         </div>
         <div class="form-group">
@@ -53,7 +53,7 @@
         <div class="form-group">
               <label class="col-md-3 control-label">Fecha de Expedicion</label>
               <div class="col-md-9">
-                   <asp:TextBox ID="fecha_expedicion" runat="server" ToolTip="Fecha de Expedicion del documento del empleado" CssClass="form-control" placeholder="aaaa-mm-dd" MaxLength="10" Width="300 px" TextMode="Date"></asp:TextBox>
+                   <asp:TextBox ID="fecha_expedicion" runat="server" ToolTip="Fecha de Expedicion del documento del empleado" CssClass="form-control" placeholder="aaaa-mm-dd" MaxLength="10" Width="300 px"></asp:TextBox>
               </div>
         </div>
         <div class="form-group">
@@ -81,7 +81,8 @@
         <div class="form-group">
               <label class="col-md-3 control-label">Numero de Hijos</label>
               <div class="col-md-9">
-                  <asp:DropDownList ID="num_hijos" runat="server" CssClass="form-control" Width="80px">
+                  <asp:DropDownList ID="num_hijos" runat="server" CssClass="form-control" Width="100px">
+                      <asp:ListItem>Seleccione...</asp:ListItem>
                       <asp:ListItem>0</asp:ListItem>
                       <asp:ListItem>1</asp:ListItem>
                       <asp:ListItem>2</asp:ListItem>
@@ -146,10 +147,10 @@
         </div>
         <div class="form-group">
               <div style="text-align: center">
-                  <asp:Button ID="B_nuevo" runat="server" Text="Crear Empleado" CssClass="btn btn-success m-r-5 m-b-5" OnClick="B_nuevo_Click" />
-                  <asp:Button ID="B_cancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger m-r-5 m-b-5" OnClick="B_cancelar_Click" />
+                  <asp:Button ID="B_nuevo" runat="server" Text="Modificar Empleado" CssClass="btn btn-success m-r-5 m-b-5" OnClick="B_nuevo_Click"  />
+                  <asp:Button ID="B_cancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger m-r-5 m-b-5"  />
               </div>
         </div>
-    </form>
+     </form>
 </asp:Content>
 
