@@ -90,9 +90,6 @@ namespace Data
                 dataAdapter.SelectCommand.Parameters.Add("_ciudad", MySqlDbType.VarChar, 45).Value = eEmpleado.Ciudad;
                 dataAdapter.SelectCommand.Parameters.Add("_tel_contacto", MySqlDbType.VarChar, 45).Value = eEmpleado.TelContacto;
                 dataAdapter.SelectCommand.Parameters.Add("_nom_contacto", MySqlDbType.VarChar, 45).Value = eEmpleado.NomContacto1;
-                dataAdapter.SelectCommand.Parameters.Add("_talla_botas", MySqlDbType.VarChar, 4).Value = eEmpleado.TallaBotas;
-                dataAdapter.SelectCommand.Parameters.Add("_talla_overol", MySqlDbType.VarChar, 4).Value = eEmpleado.TallaOverol;
-                dataAdapter.SelectCommand.Parameters.Add("_talla_impermeable", MySqlDbType.VarChar, 4).Value = eEmpleado.TallaImpermeable;
                 dataAdapter.SelectCommand.Parameters.Add("_observaciones", MySqlDbType.Text).Value = eEmpleado.Observaciones;
 
 
@@ -191,9 +188,6 @@ namespace Data
                 dataAdapter.SelectCommand.Parameters.Add("_ciudad", MySqlDbType.VarChar, 45).Value = eEmpleado.Ciudad;
                 dataAdapter.SelectCommand.Parameters.Add("_tel_contacto", MySqlDbType.VarChar, 45).Value = eEmpleado.TelContacto;
                 dataAdapter.SelectCommand.Parameters.Add("_nom_contacto", MySqlDbType.VarChar, 45).Value = eEmpleado.NomContacto1;
-                dataAdapter.SelectCommand.Parameters.Add("_talla_botas", MySqlDbType.VarChar, 4).Value = eEmpleado.TallaBotas;
-                dataAdapter.SelectCommand.Parameters.Add("_talla_overol", MySqlDbType.VarChar, 4).Value = eEmpleado.TallaOverol;
-                dataAdapter.SelectCommand.Parameters.Add("_talla_impermeable", MySqlDbType.VarChar, 4).Value = eEmpleado.TallaImpermeable;
                 dataAdapter.SelectCommand.Parameters.Add("_observaciones", MySqlDbType.Text).Value = eEmpleado.Observaciones;
 
 

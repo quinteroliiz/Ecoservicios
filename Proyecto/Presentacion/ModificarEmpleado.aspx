@@ -8,7 +8,7 @@
         <div class="form-group">
               <label class="col-md-3 control-label">Identificacion</label>
               <div class="col-md-9">
-                  <asp:textbox id="id_empleado" runat="server" tooltip="Identificacion" cssclass="form-control" placeholder="Identificacion" maxlength="10" width="300 px"></asp:textbox>
+                  <asp:textbox id="id_empleado" runat="server" tooltip="Identificacion" cssclass="form-control" placeholder="Identificacion" maxlength="10" width="300 px" Enabled="False"></asp:textbox>
  
               </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="form-group">
               <label class="col-md-3 control-label">Fecha de Expedicion</label>
               <div class="col-md-9">
-                   <asp:TextBox ID="fecha_expedicion" runat="server" ToolTip="Fecha de Expedicion del documento del empleado" CssClass="form-control" placeholder="aaaa-mm-dd" MaxLength="10" Width="300 px"></asp:TextBox>
+                   <asp:TextBox ID="fecha_expedicion" runat="server" ToolTip="Fecha de Expedicion del documento del empleado" CssClass="form-control" placeholder="aaaa-mm-dd" MaxLength="10" Width="300 px" OnTextChanged="fecha_expedicion_TextChanged"></asp:TextBox>
               </div>
         </div>
         <div class="form-group">
@@ -71,10 +71,10 @@
         <div class="form-group">
               <label class="col-md-3 control-label">Genero</label>
               <div class="col-md-9">
-                  <asp:DropDownList ID="genero" runat="server" CssClass="form-control" Width="161px">
+                  <asp:DropDownList ID="genero" runat="server" CssClass="form-control" Width="161px" OnSelectedIndexChanged="genero_SelectedIndexChanged">
                       <asp:ListItem>Seleccione</asp:ListItem>
-                      <asp:ListItem Value="1">Femenino</asp:ListItem>
-                      <asp:ListItem Value="2">Masculino</asp:ListItem>
+                      <asp:ListItem Value="Femenino">Femenino</asp:ListItem>
+                      <asp:ListItem Value="Masculino">Masculino</asp:ListItem>
                   </asp:DropDownList>
               </div>
         </div>
@@ -122,24 +122,6 @@
               </div>
         </div>
         <div class="form-group">
-              <label class="col-md-3 control-label">Talla de Botas</label>
-              <div class="col-md-9">
-                   <asp:TextBox ID="talla_botas" runat="server" ToolTip="Talla de las botas del empleado" CssClass="form-control" placeholder="Talla" MaxLength="4" Width="80 px"></asp:TextBox>
-              </div>
-        </div>
-        <div class="form-group">
-              <label class="col-md-3 control-label">Talla de Overol</label>
-              <div class="col-md-9">
-                   <asp:TextBox ID="talla_overol" runat="server" ToolTip="Talla del overol del empleado" CssClass="form-control" placeholder="Talla" MaxLength="4" Width="80 px"></asp:TextBox>
-              </div>
-        </div>
-        <div class="form-group">
-              <label class="col-md-3 control-label">Talla de Impermeable</label>
-              <div class="col-md-9">
-                   <asp:TextBox ID="talla_impermeable" runat="server" ToolTip="Talla de impermeable" CssClass="form-control" placeholder="Talla" MaxLength="4" Width="80 px"></asp:TextBox>
-              </div>
-        </div>
-        <div class="form-group">
               <label class="col-md-3 control-label">Observaciones</label>
               <div class="col-md-9">
                    <asp:TextBox ID="observaciones" runat="server" ToolTip="observaciones" CssClass="form-control"  MaxLength="4" Width="300" TextMode="MultiLine"></asp:TextBox>
@@ -148,7 +130,7 @@
         <div class="form-group">
               <div style="text-align: center">
                   <asp:Button ID="B_nuevo" runat="server" Text="Modificar Empleado" CssClass="btn btn-success m-r-5 m-b-5" OnClick="B_nuevo_Click"  />
-                  <asp:Button ID="B_cancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger m-r-5 m-b-5"  />
+                  <asp:Button ID="B_cancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger m-r-5 m-b-5" OnClick="B_cancelar_Click"  />
               </div>
         </div>
      </form>

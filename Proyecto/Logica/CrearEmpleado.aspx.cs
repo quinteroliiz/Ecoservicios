@@ -33,18 +33,29 @@ public partial class Presentacion_CrearEmpleado : System.Web.UI.Page
         eEmpleado.Ciudad = ciudad.Text;
         eEmpleado.TelContacto = tel_contacto.Text;
         eEmpleado.NomContacto1 = nom_contacto.Text;
-        eEmpleado.TallaBotas = talla_botas.Text;
-        eEmpleado.TallaOverol = talla_overol.Text;
-        eEmpleado.TallaImpermeable = talla_impermeable.Text;
         eEmpleado.Observaciones = observaciones.Text;
 
         DAO_Empleado dEmpleado = new DAO_Empleado();
         dEmpleado.creaEmpleado(eEmpleado);
+        id_empleado.Text = "";
+        nombre_empleado.Text = "";
+        apellido_empleado.Text = "";
+        direccion_empleado.Text = "";
+        telefono_empleado.Text = "";
+        fecha_nacimiento.Text = "";
+        fecha_expedicion.Text = "";
+        lugar_expedicion.Text = "";
+        grupo_sanguineo.Text = "";
+        escolaridad.Text = "";
+        ciudad.Text = "";
+        tel_contacto.Text = "";
+        nom_contacto.Text = "";
+        observaciones.Text = "";
 
     }
 
     protected void B_cancelar_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("Empleado.aspx");
     }
 }

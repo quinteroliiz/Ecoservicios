@@ -9,7 +9,6 @@
               <label class="col-md-3 control-label">Identificacion</label>
               <div class="col-md-9">
                   <asp:textbox id="id_empleado" runat="server" tooltip="Identificacion" cssclass="form-control" placeholder="Identificacion" maxlength="10" width="300 px"></asp:textbox>
-                  <asp:requiredfieldvalidator id="RFV_id" runat="server" errormessage="*" controltovalidate="id_empleado" cssclass="alert-danger"></asp:requiredfieldvalidator>
               </div>
         </div>
         <div class="form-group">
@@ -120,25 +119,7 @@
                    <asp:TextBox ID="nom_contacto" runat="server" ToolTip="Nombre de un contacto del empleado" CssClass="form-control" placeholder="Nombre de contacto" MaxLength="45" Width="300 px"></asp:TextBox>
               </div>
         </div>
-        <div class="form-group">
-              <label class="col-md-3 control-label">Talla de Botas</label>
-              <div class="col-md-9">
-                   <asp:TextBox ID="talla_botas" runat="server" ToolTip="Talla de las botas del empleado" CssClass="form-control" placeholder="Talla" MaxLength="4" Width="80 px"></asp:TextBox>
-              </div>
-        </div>
-        <div class="form-group">
-              <label class="col-md-3 control-label">Talla de Overol</label>
-              <div class="col-md-9">
-                   <asp:TextBox ID="talla_overol" runat="server" ToolTip="Talla del overol del empleado" CssClass="form-control" placeholder="Talla" MaxLength="4" Width="80 px"></asp:TextBox>
-              </div>
-        </div>
-        <div class="form-group">
-              <label class="col-md-3 control-label">Talla de Impermeable</label>
-              <div class="col-md-9">
-                   <asp:TextBox ID="talla_impermeable" runat="server" ToolTip="Talla de impermeable" CssClass="form-control" placeholder="Talla" MaxLength="4" Width="80 px"></asp:TextBox>
-              </div>
-        </div>
-        <div class="form-group">
+         <div class="form-group">
               <label class="col-md-3 control-label">Observaciones</label>
               <div class="col-md-9">
                    <asp:TextBox ID="observaciones" runat="server" ToolTip="observaciones" CssClass="form-control"  MaxLength="4" Width="300" TextMode="MultiLine"></asp:TextBox>

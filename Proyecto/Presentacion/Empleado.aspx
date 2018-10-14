@@ -16,14 +16,13 @@
             <asp:BoundField DataField="apellido_empleado" HeaderText="Apellido" />
             <asp:BoundField DataField="direccion_empleado" HeaderText="Direccion" />
             <asp:BoundField DataField="telefono_empleado" HeaderText="Telefono" />
-            <asp:BoundField DataField="talla_botas" HeaderText="Botas" />
-            <asp:BoundField DataField="talla_overol" HeaderText="Overol" />
-            <asp:BoundField HeaderText="Impermeable" DataField="talla_impermeable" />
+            <asp:BoundField DataField="grupo_sanguineo" HeaderText="Grupo Sanguineo" />
+            <asp:BoundField HeaderText="Genero" DataField="genero" />
+            <asp:BoundField DataField="observaciones" HeaderText="Observaciones" />
             <asp:TemplateField HeaderText="Acciones">
                 <ItemTemplate>
-                    <asp:Button ID="B_consultar" runat="server" CssClass="btn btn-info"  />
-                    <asp:Button ID="B_modificar" runat="server" CssClass="btn btn-warning" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>' CommandName='<%# "Modificar" %>' />
-                    <asp:Button ID="B_eliminar" runat="server" CssClass="btn btn-danger" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>' CommandName='<%# "Eliminar" %>'  />
+                    <asp:Button ID="B_modificar" runat="server" CssClass="btn btn-warning" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>' CommandName='<%# "Modificar" %>' ToolTip="Modificar" />
+                    <asp:Button ID="B_eliminar" runat="server" CssClass="btn btn-danger" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>' CommandName='<%# "Eliminar" %>' OnClick="B_eliminar_Click" ToolTip="Eliminar"  />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

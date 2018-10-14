@@ -48,9 +48,10 @@ public partial class Presentacion_Empleado : System.Web.UI.Page
             dEmpleado.eliminarEmpleado(eEmpleado);
             GV_empleado.DataBind();
         }
-        else if (e.CommandName == "Ver")
-        {
+    }
 
-        }
+    protected void B_eliminar_Click(object sender, EventArgs e)
+    {
+
     }
 }
