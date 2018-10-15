@@ -100,5 +100,121 @@ namespace Data
             }
             return datos;
         }
+
+        public DataTable mostrarPostulacion()
+        {
+            DataTable Empleado = new DataTable();
+            MySqlConnection conection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyBd"].ConnectionString);
+
+            try
+            {
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter("sp_mostrar_postulacion", conection);
+                dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                conection.Open();
+                dataAdapter.Fill(Empleado);
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            finally
+            {
+                if (conection != null)
+                {
+                    conection.Close();
+                }
+            }
+            return Empleado;
+        }
+        public void eliminarPostulacion(int id_postulacion)
+        {
+            DataTable Empleado = new DataTable();
+            MySqlConnection conection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyBd"].ConnectionString);
+
+            try
+            {
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter("sp_eliminar_postulacion", conection);
+                dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                dataAdapter.SelectCommand.Parameters.Add("_id_postulacion", MySqlDbType.Int32).Value = id_postulacion;
+                conection.Open();
+                dataAdapter.Fill(Empleado);
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            finally
+            {
+                if (conection != null)
+                {
+                    conection.Close();
+                }
+            }
+
+        }
+        public DataTable mostrarCargos()
+        {
+            DataTable Empleado = new DataTable();
+            MySqlConnection conection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyBd"].ConnectionString);
+
+            try
+            {
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter("sp_muestra_cargo", conection);
+                dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                conection.Open();
+                dataAdapter.Fill(Empleado);
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            finally
+            {
+                if (conection != null)
+                {
+                    conection.Close();
+                }
+            }
+            return Empleado;
+        }
+        public DataTable creaPostulacion(EAspirante eAspirante)
+        {
+
+            DataTable datos = new DataTable();
+            MySqlConnection conection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyBd"].ConnectionString);
+
+            try
+            {
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter("sp_nueva_postulacion", conection);
+                dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                dataAdapter.SelectCommand.Parameters.Add("_id_postulacion", MySqlDbType.Int32).Value = eAspirante.IdPostulacion;
+                dataAdapter.SelectCommand.Parameters.Add("_id_aspirante", MySqlDbType.Int32).Value = eAspirante.Id;
+                dataAdapter.SelectCommand.Parameters.Add("_id_solicitud", MySqlDbType.Int32).Value = eAspirante.IdCargo;
+                dataAdapter.SelectCommand.Parameters.Add("_fecha_entrevista", MySqlDbType.Date).Value = eAspirante.FechaEntrevista;
+                dataAdapter.SelectCommand.Parameters.Add("_id_usuarioEntrevista", MySqlDbType.Int32).Value = eAspirante.IdEntrevistador;
+                dataAdapter.SelectCommand.Parameters.Add("_concepto", MySqlDbType.Text).Value = eAspirante.Concepto;
+                dataAdapter.SelectCommand.Parameters.Add("_id_estado", MySqlDbType.Int32).Value = eAspirante.IdEstado;
+
+
+
+
+                conection.Open();
+                dataAdapter.Fill(datos);
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            finally
+            {
+                if (conection != null)
+                {
+                    conection.Close();
+                }
+            }
+            return datos;
+        }
     }
 }

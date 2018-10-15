@@ -1,0 +1,308 @@
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_eliminar_aspirante`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_eliminar_aspirante`(IN _id_aspirante INT)
+BEGIN
+		DELETE FROM aspirante WHERE id_aspirante=_id_aspirante;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_eliminar_empleado`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_eliminar_empleado`(IN _id_empleado INT)
+BEGIN
+	DELETE FROM empleado WHERE id_empleado=_id_empleado;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_eliminar_postulacion`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_eliminar_postulacion`(IN _id_postulacion INT)
+BEGIN
+	DELETE FROM postulacion WHERE id_postulacion=_id_postulacion;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_modificar_empleado`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_modificar_empleado`(
+		IN _id_empleado INT,
+		IN _nombre_empleado TINYTEXT,
+		IN _apellido_empleado TINYTEXT,
+		IN _direccion_empleado TINYTEXT,
+		IN _telefono_empleado TINYTEXT,
+		IN _id_estado INT,
+		IN _lugar_expedicion VARCHAR(45),
+		IN _grupo_sanguineo VARCHAR(4),
+		IN _genero VARCHAR(45),
+		IN _num_hijos INT,
+		IN _escolaridad VARCHAR(45),
+		IN _ciudad VARCHAR(45),
+		IN _tel_contacto VARCHAR(45),
+		IN _nom_contacto VARCHAR(45),
+		IN _observaciones TEXT)
+BEGIN
+	UPDATE empleado 
+	SET 
+	   id_empleado=_id_empleado,
+	   nombre_empleado=_nombre_empleado,
+	   apellido_empleado=_apellido_empleado,
+	   direccion_empleado=_direccion_empleado,
+	   telefono_empleado=_telefono_empleado,
+	   id_estado=_id_estado,
+	   lugar_expedicion=_lugar_expedicion,
+	   grupo_sanguineo=_grupo_sanguineo,
+	   genero=_genero,
+	   num_hijos=_num_hijos,
+	   escolaridad=_escolaridad,
+	   ciudad=_ciudad,
+	   tel_contacto=_tel_contacto,
+	   nom_contacto=_nom_contacto,
+	   observaciones=_observaciones
+	WHERE id_empleado=_id_empleado;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_mostrar_empleado`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_mostrar_empleado`(IN  _id_empleado INT)
+BEGIN
+          SELECT * FROM empleado WHERE id_empleado=_id_empleado;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_mostrar_postulacion`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_mostrar_postulacion`()
+BEGIN
+	SELECT 
+		a.id_postulacion,
+		b.cc_aspirante AS cedula,
+		c.nombre_cargo AS cargo,
+		a.fecha_entrevista AS fecha,
+		a.id_usuarioEntrevista AS entrevistador,
+		a.concepto,
+		d.nombre_estado AS estado
+	FROM postulacion a INNER JOIN	aspirante b ON a.id_aspirante=b.id_aspirante
+	INNER JOIN cargos c ON a.id_solicitud=c.id_cargo INNER JOIN estados d ON a.id_estado=d.id_estados;
+	
+		
+		
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_muestra_aspirante`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_muestra_aspirante`()
+BEGIN
+	SELECT * FROM aspirante;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_muestra_cargo`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_muestra_cargo`()
+BEGIN
+	SELECT * FROM cargos;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_muestra_empleado`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_muestra_empleado`()
+BEGIN
+	SELECT 
+		id_empleado,
+		nombre_empleado,
+		apellido_empleado,
+		direccion_empleado,
+		telefono_empleado,
+		grupo_sanguineo,
+		genero,
+		observaciones
+			FROM empleado;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_muestra_estado`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_muestra_estado`()
+BEGIN
+	SELECT * FROM estados;
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_nueva_postulacion`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_nueva_postulacion`(
+		IN _id_postulacion INT,
+		IN _id_aspirante INT,
+		IN _id_solicitud INT,
+		IN _fecha_entrevista DATE,
+		IN _id_usuarioEntrevista INT,
+		IN _concepto TEXT,
+		IN _id_estado INT
+    )
+BEGIN
+	INSERT INTO postulacion(id_postulacion,id_aspirante,id_solicitud,
+				fecha_entrevista,id_usuarioEntrevista,concepto,id_estado)
+	VALUES (_id_postulacion,_id_aspirante,_id_solicitud,
+		_fecha_entrevista,_id_usuarioEntrevista,_concepto,_id_estado);
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_nuevo_aspirante`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_nuevo_aspirante`(
+		IN _id_aspirante INT,
+		IN _cedula_aspirante INT,
+		IN _nombre_aspirante VARCHAR(100),
+		IN _apellido_aspirante VARCHAR(100),
+		IN _direccion_aspirante VARCHAR(150),
+		IN _telefono_aspirante VARCHAR(45)
+    )
+BEGIN
+	INSERT INTO aspirante(
+		id_aspirante,
+		cc_aspirante,
+		nombre_aspirante,
+		apellido_aspirante,
+		direccion_aspirante,
+		telefono_aspirante
+)
+	VALUES (
+		_id_aspirante,
+		_cedula_aspirante,
+		_nombre_aspirante,
+		_apellido_aspirante,
+		_direccion_aspirante,
+		_telefono_aspirante
+	);
+    END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+USE `ecoservi_plataforma17`$$
+
+DROP PROCEDURE IF EXISTS `sp_nuevo_empleado`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_nuevo_empleado`(
+		IN _id_empleado INT,
+		IN _nombre_empleado TINYTEXT,
+		IN _apellido_empleado TINYTEXT,
+		IN _direccion_empleado TINYTEXT,
+		IN _telefono_empleado TINYTEXT,
+		IN _fecha_nacimiento DATE,
+		IN _id_estado INT,
+		IN _fecha_expedicion DATE,
+		IN _lugar_expedicion VARCHAR(45),
+		IN _grupo_sanguineo VARCHAR(4),
+		IN _genero VARCHAR(45),
+		IN _num_hijos INT,
+		IN _escolaridad VARCHAR(45),
+		IN _ciudad VARCHAR(45),
+		IN _tel_contacto VARCHAR(45),
+		IN _nom_contacto VARCHAR(45),
+		IN _observaciones TEXT
+    )
+BEGIN
+	INSERT INTO empleado(
+		id_empleado,
+		nombre_empleado,
+		apellido_empleado,
+		direccion_empleado,
+		telefono_empleado,
+		fecha_nacimiento,
+		id_estado,
+		fecha_expedicion,
+		lugar_expedicion,
+		grupo_sanguineo,
+		genero,
+		num_hijos,
+		escolaridad,
+		ciudad,
+		tel_contacto,
+		nom_contacto,
+		observaciones)
+	VALUES (
+		_id_empleado,
+		_nombre_empleado,
+		_apellido_empleado,
+		_direccion_empleado,
+		_telefono_empleado,
+		_fecha_nacimiento,
+		_id_estado,
+		_fecha_expedicion,
+		_lugar_expedicion,
+		_grupo_sanguineo,
+		_genero,
+		_num_hijos,
+		_escolaridad,
+		_ciudad,
+		_tel_contacto,
+		_nom_contacto,
+		_observaciones
+	);
+    END$$
+
+DELIMITER ;

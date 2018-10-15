@@ -14,12 +14,12 @@ A:\Proyecto\Ecoservicios\Logica\bin\Debug\Logica.pdb
 A:\Proyecto\Ecoservicios\Logica\bin\Debug\Data.dll
 A:\Proyecto\Ecoservicios\Logica\bin\Debug\Encapsular.dll
 A:\Proyecto\Ecoservicios\Logica\bin\Debug\Utilitarios.dll
+A:\Proyecto\Ecoservicios\Logica\bin\Debug\MySql.Data.dll
+A:\Proyecto\Ecoservicios\Logica\bin\Debug\Google.Protobuf.dll
 A:\Proyecto\Ecoservicios\Logica\bin\Debug\Data.pdb
 A:\Proyecto\Ecoservicios\Logica\bin\Debug\Encapsular.pdb
 A:\Proyecto\Ecoservicios\Logica\bin\Debug\Utilitarios.pdb
+A:\Proyecto\Ecoservicios\Logica\bin\Debug\MySql.Data.xml
 A:\Proyecto\Ecoservicios\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
 A:\Proyecto\Ecoservicios\Logica\obj\Debug\Logica.dll
 A:\Proyecto\Ecoservicios\Logica\obj\Debug\Logica.pdb
-A:\Proyecto\Ecoservicios\Logica\bin\Debug\MySql.Data.dll
-A:\Proyecto\Ecoservicios\Logica\bin\Debug\Google.Protobuf.dll
-A:\Proyecto\Ecoservicios\Logica\bin\Debug\MySql.Data.xml

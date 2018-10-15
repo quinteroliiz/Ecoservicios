@@ -14,6 +14,12 @@ namespace Encapsular
         private String apellido;
         private String direccion;
         private String telefono;
+        private int idPostulacion;
+        private int idCargo;
+        private String fechaEntrevista;
+        private int idEntrevistador;
+        private String concepto;
+        private int idEstado;
 
         public int Id
         {
@@ -90,6 +96,84 @@ namespace Encapsular
             set
             {
                 telefono = value;
+            }
+        }
+
+        public int IdPostulacion
+        {
+            get
+            {
+                return idPostulacion;
+            }
+
+            set
+            {
+                idPostulacion = value;
+            }
+        }
+
+        public int IdCargo
+        {
+            get
+            {
+                return idCargo;
+            }
+
+            set
+            {
+                idCargo = value;
+            }
+        }
+
+        public string FechaEntrevista
+        {
+            get
+            {
+                return fechaEntrevista;
+            }
+
+            set
+            {
+                fechaEntrevista = value;
+            }
+        }
+
+        public int IdEntrevistador
+        {
+            get
+            {
+                return idEntrevistador;
+            }
+
+            set
+            {
+                idEntrevistador = value;
+            }
+        }
+
+        public string Concepto
+        {
+            get
+            {
+                return concepto;
+            }
+
+            set
+            {
+                concepto = value;
+            }
+        }
+
+        public int IdEstado
+        {
+            get
+            {
+                return idEstado;
+            }
+
+            set
+            {
+                idEstado = value;
             }
         }
     }

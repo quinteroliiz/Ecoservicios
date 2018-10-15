@@ -9,7 +9,7 @@
         <br />
         <br />
 
-        <asp:GridView ID="GV_Aspirante" runat="server" AutoGenerateColumns="False" CssClass="table-responsive" DataKeyNames="id_aspirante" DataSourceID="ODS_Aspirante">
+        <asp:GridView ID="GV_Aspirante" runat="server" AutoGenerateColumns="False" CssClass="table-responsive" DataKeyNames="id_aspirante" DataSourceID="ODS_Aspirante" AllowPaging="True" OnRowCommand="GV_Aspirante_RowCommand">
             <Columns>
                 <asp:BoundField DataField="id_aspirante" HeaderText="Id" />
                 <asp:BoundField DataField="cc_aspirante" HeaderText="Cedula" />
@@ -17,10 +17,11 @@
                 <asp:BoundField DataField="apellido_aspirante" HeaderText="Apellido" />
                 <asp:BoundField DataField="direccion_aspirante" HeaderText="Direccion" />
                 <asp:BoundField DataField="telefono_aspirante" HeaderText="Telefono" />
-                <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
-                <ControlStyle CssClass="btn btn-danger" />
-                <ItemStyle CssClass="btn btn-danger" />
-                </asp:CommandField>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button ID="B_eliminar" runat="server" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>' CommandName='<%# "Eliminar" %>' CssClass="btn btn-danger" OnClick="B_eliminar_Click" ToolTip="Eliminar" />
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
         </asp:GridView>
         <asp:ObjectDataSource ID="ODS_Aspirante" runat="server" DeleteMethod="eliminarAspirante" SelectMethod="mostrarAspirante" TypeName="Data.DAO_Aspirante">
