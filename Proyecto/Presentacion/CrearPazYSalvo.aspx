@@ -9,15 +9,15 @@
               <label class="col-md-3 control-label">Cedula</label>
               <div class="col-md-9">
                   <asp:textbox id="cc_empleado" runat="server" tooltip="Cedula del empleado" cssclass="form-control" placeholder="Cedula del empleado" maxlength="150" width="300 px"></asp:textbox>
-                <asp:Button ID="B_buscar" runat="server" Text="Consultar" /> 
+                <asp:Button ID="B_buscar" runat="server" Text="Consultar" CssClass="btn-info" OnClick="B_buscar_Click" /> 
               </div>
                 
         </div>
         </asp:Panel>
-        
-        <table cellpadding="0" cellspacing="0" class="nav-justified ">
+        <asp:Panel ID="Panel2" runat="server" Visible="False">
+             <table cellpadding="0" cellspacing="0" class="nav-justified ">
             <tr>
-                <td>
+                <td style="width: 55px">
                     <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>
                 </td>
                 <td>
@@ -31,7 +31,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="height: 21px">
+                <td style="height: 21px; width: 55px;">
                     <asp:Label ID="Label3" runat="server" Text="Cargo"></asp:Label>
                 </td>
                 <td style="height: 21px">
@@ -45,7 +45,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="height: 17px"></td>
+                <td style="height: 17px; width: 55px;"></td>
                 <td style="height: 17px"></td>
                 <td style="height: 17px"></td>
                 <td style="height: 17px"></td>
@@ -115,7 +115,15 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
-
+        <div class="form-group">
+               <div class="col-md-9">
+                <asp:Button ID="B_guardar" runat="server" Text="Guardar" CssClass="btn-success" />
+                   <asp:Button ID="B_cancelar" runat="server" Text="Cancelar" CssClass="btn-danger" />
+              </div>
+                
+        </div>
+        </asp:Panel>
+       
     </form>
 </asp:Content>
 

@@ -9,7 +9,7 @@
         <br />
         <br />
 
-        <asp:GridView ID="GV_Aspirante" runat="server" AutoGenerateColumns="False" CssClass="table-responsive" DataKeyNames="id_aspirante" DataSourceID="ODS_Aspirante" AllowPaging="True" OnRowCommand="GV_Aspirante_RowCommand">
+        <asp:GridView ID="GV_Aspirante" runat="server" AutoGenerateColumns="False" CssClass="table" DataKeyNames="id_aspirante" DataSourceID="ODS_Aspirante" AllowPaging="True" OnRowCommand="GV_Aspirante_RowCommand">
             <Columns>
                 <asp:BoundField DataField="id_aspirante" HeaderText="Id" />
                 <asp:BoundField DataField="cc_aspirante" HeaderText="Cedula" />
