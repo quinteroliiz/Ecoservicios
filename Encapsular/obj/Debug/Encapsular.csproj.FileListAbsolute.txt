@@ -6,3 +6,4 @@ A:\Proyecto\Ecoservicios\Encapsular\bin\Debug\Encapsular.dll
 A:\Proyecto\Ecoservicios\Encapsular\bin\Debug\Encapsular.pdb
 A:\Proyecto\Ecoservicios\Encapsular\obj\Debug\Encapsular.dll
 A:\Proyecto\Ecoservicios\Encapsular\obj\Debug\Encapsular.pdb
+A:\Proyecto\Ecoservicios\Encapsular\obj\Debug\Encapsular.csprojResolveAssemblyReference.cache
